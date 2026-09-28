@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Model checkpoints / weights
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.h5
+
+# Generated Python/data artifacts
+*.pkl
+*.pickle
+*.npy
+*.npz
+
+# Large COCO datasets
+/data/train2017/
+/data/val2017/
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
