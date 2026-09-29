@@ -32,6 +32,34 @@ The architecture is implemented through the modules in the `models/` directory, 
 - Attention-map visualization for generated captions
 - CPU-first training/inference with optional CUDA when available
 
+## Example outputs from the project
+
+The repository includes example result images under the `images/` directory. These are useful for understanding the type of output produced by the captioning pipeline: a model-generated caption is compared against the visual content of the image, and the attention maps show which image regions were emphasized while each word was being produced.
+
+### Generated caption examples
+
+<p align="center">
+    <img src="images/output_image1.png" width="260" alt="Example generated caption 1">
+    <img src="images/output_image2.png" width="260" alt="Example generated caption 2">
+    <img src="images/output_image3.png" width="260" alt="Example generated caption 3">
+</p>
+
+<p align="center">
+    <img src="images/output_image4.png" width="260" alt="Example generated caption 4">
+    <img src="images/output_image5.png" width="260" alt="Example generated caption 5">
+</p>
+
+These outputs show the model producing short, image-grounded descriptions such as identifying a person, vehicle, object, or scene. The model is not designed to generate highly polished captions every time; it is a compact research implementation that favors clear visual grounding over production-level language quality.
+
+### Attention-map examples
+
+<p align="center">
+    <img src="images/heatmap_image-2.png" width="420" alt="Attention map showing model focus on image regions">
+    <img src="images/heatmap_other.png" width="420" alt="Second attention map showing model focus on image regions">
+</p>
+
+The attention maps highlight the spatial regions the model focused on while predicting particular words. In these visualizations, brighter areas indicate stronger attention. This makes the decoder easier to inspect: instead of being a black box, it can be interpreted as choosing the image regions most relevant to a word such as an object, person, or scene element.
+
 ## Repository structure
 
 ```text
